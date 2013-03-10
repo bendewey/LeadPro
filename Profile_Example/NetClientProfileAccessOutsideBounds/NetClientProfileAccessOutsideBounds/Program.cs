@@ -10,7 +10,7 @@ namespace NetClientProfileAccessOutsideBounds
         {
             var webAssembly = Assembly.Load("System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
 
-            Console.WriteLine("Types in System.Web.UI.WebControls");
+            Console.WriteLine("Loading types in System.Web.UI.WebControls even though we are in the Client Profile");
             Console.WriteLine();
 
             var webFormsControlTypes = from t in webAssembly.GetExportedTypes()
