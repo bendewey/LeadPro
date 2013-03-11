@@ -16,7 +16,7 @@
 
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key="Default">
-			<SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FF0E85AE" />
+            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="#FF1289BA" />
             <x:String x:Key="BackButtonGlyph">&#xE071;</x:String>
             <x:String x:Key="BackButtonSnappedGlyph">&#xE0BA;</x:String>
         </ResourceDictionary>
