@@ -26,7 +26,7 @@ namespace LeadPro.Win8
         {
             get
             {
-                return new EditCustomerViewModel(_customerRepository, new WinRtImageCaptureService(), new WinRtMappingService());
+                return new EditCustomerViewModel(_customerRepository);
             }
         }
     }

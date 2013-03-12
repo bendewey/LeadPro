@@ -23,7 +23,7 @@ namespace LeadPro.Phone8
 
         public EditCustomerViewModel EditCustomerViewModel
         {
-            get { return new EditCustomerViewModel(_customerRepository, new PhoneImageCaptureService(), new PhoneMappingService()); }
+            get { return new EditCustomerViewModel(_customerRepository); }
         }
     }
 }

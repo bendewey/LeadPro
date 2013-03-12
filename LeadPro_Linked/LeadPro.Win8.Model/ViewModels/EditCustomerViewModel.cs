@@ -3,11 +3,8 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LeadPro.Model.Common;
-using Microsoft.Phone.Tasks;
-using Windows.Media.Capture;
 using Windows.Storage;
 using Windows.Storage.Pickers;
-using Windows.UI.Popups;
 
 namespace LeadPro.Model.ViewModels
 {
@@ -49,7 +46,7 @@ namespace LeadPro.Model.ViewModels
 #if WINDOWS_PHONE
         public void CaptureImage()
         {
-            var cameraCaptureTask = new CameraCaptureTask();
+            var cameraCaptureTask = new Microsoft.Phone.Tasks.CameraCaptureTask();
             cameraCaptureTask.Completed += (s, e) =>
                 {
                     if (e.Error == null)
@@ -63,16 +60,16 @@ namespace LeadPro.Model.ViewModels
 #else
         public async void CaptureImage()
         {
-            var dialog = new MessageDialog("Would you like to use your camera or select a picture from your library?");
-            dialog.Commands.Add(new UICommand("I'd like to use my camera", null, "camera"));
-            dialog.Commands.Add(new UICommand("I already have the picture", null, "picker"));
+            var dialog = new Windows.UI.Popups.MessageDialog("Would you like to use your camera or select a picture from your library?");
+            dialog.Commands.Add(new Windows.UI.Popups.UICommand("I'd like to use my camera", null, "camera"));
+            dialog.Commands.Add(new Windows.UI.Popups.UICommand("I already have the picture", null, "picker"));
 
             IStorageFile photoFile;
             var command = await dialog.ShowAsync();
             if ((string) command.Id == "camera")
             {
-                var cameraCapture = new CameraCaptureUI();
-                photoFile = await cameraCapture.CaptureFileAsync(CameraCaptureUIMode.Photo);
+                var cameraCapture = new Windows.Media.Capture.CameraCaptureUI();
+                photoFile = await cameraCapture.CaptureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.Photo);
             }
             else
             {
@@ -96,7 +93,7 @@ namespace LeadPro.Model.ViewModels
 #if WINDOWS_PHONE
         public void OpenMaps()
         {
-            var mapsTask = new MapsTask();
+            var mapsTask = new Microsoft.Phone.Tasks.MapsTask();
             mapsTask.SearchTerm = Customer.City + ", " + Customer.State;
             mapsTask.Show();
         }
