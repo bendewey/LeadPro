@@ -16,7 +16,7 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="LeadPro.App">
       <VisualElements DisplayName="LeadPro" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="LeadPro" ForegroundText="light" BackgroundColor="#1289BA">
-        <DefaultTile ShowName="allLogos" />
+        <DefaultTile ShowName="logoOnly" WideLogo="Assets\WideLogo.png" />
         <SplashScreen Image="Assets\SplashScreen.png" />
       </VisualElements>
     </Application>

@@ -19,7 +19,7 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>LeadPro.Phone8_$(Configuration)_$(Platform).xap</XapFilename>
+    <XapFilename>LeadPro.Phone8c_Debug_AnyCPU.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>LeadPro.Phone8.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
