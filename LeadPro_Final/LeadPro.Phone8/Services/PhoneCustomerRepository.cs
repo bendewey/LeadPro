@@ -9,7 +9,7 @@ namespace LeadPro.Phone8.Services
 {
     public class PhoneCustomerRepository : ICustomerRepository
     {
-        private const string ServerUri = "http://192.168.1.3:7700/api/";
+        private const string ServerUri = "http://www.bendewey.com/leadpro/api/";
 
         public Task<List<Customer>> Get()
         {
